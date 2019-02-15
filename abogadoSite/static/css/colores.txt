@@ -1,0 +1,4 @@
+azul oscuro:2C3E50
+dorado:C18F59
+negro suave:202020
+granate bonito:502F36

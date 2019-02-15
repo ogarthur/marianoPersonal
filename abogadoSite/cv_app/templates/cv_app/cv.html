@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content%}
+
+<!-- About Section -->
+<section id="about">
+  <div class="container">
+    <h2 class="text-center text-uppercase text-secondary mb-0">¿Quiénes somos?</h2>
+    <hr class="star-dark mb-5">
+    <div class="row">
+      <div class="col-lg-4 ml-auto">
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipiscing elit aptent, senectus pellentesque suspendisse blandit erat laoreet ante ut, fames cras magnis orci suscipit dapibus aenean. Luctus eros varius sociosqu semper netus augue, tempus inceptos vel aptent eleifend nulla proin, donec nam fames arcu per. Cras vivamus torquent magna sem vulputate, morbi porttitor nullam mauris sagittis ligula, dignissim curabitur cursus a.</p>
+      </div>
+      <div class="col-lg-4 mr-auto">
+        <p class="lead">Nostra sem aliquet sed ac enim fames eros, arcu hendrerit fringilla rutrum lectus tristique luctus nisl, quam ridiculus est urna condimentum nam. Velit hendrerit eu libero auctor porta vestibulum posuere sociosqu, porttitor habitant laoreet quis felis molestie magna interdum, congue lacus risus penatibus tempor habitasse dui. Vestibulum ullamcorper eleifend sociosqu felis pharetra urna vulputate scelerisque nullam nam orci non netus quam lobortis magnis, fames diam volutpat cum congue ad hac euismod condimentum a sociis aliquet ut senectus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-primary text-white mb-0" >
+    <div class="container">
+      <h2  class="text-center text-uppercase text-white">Contacto</h2>
+      <hr class="star-light mb-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+        <p class='lead'> Si desea ponerse en contacto con nosotros por email, rellene el formulario indicando el motivo de su consulta.</p>
+      </div>
+        </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+          <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Nombre</label>
+                <input class="form-control" id="name" type="text" placeholder="Nombre" required="required" data-validation-required-message="Por favor introduzca su nombre.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Email </label>
+                <input class="form-control" id="email" type="email" placeholder="Email" required="required" data-validation-required-message="Por favor introduzca su email.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Mensaje</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Mensaje" required="required" data-validation-required-message="Por favor introduzca su mensaje."></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-xl btn-outline-light" id="sendMessageButton">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="location">
+    <div class="col-lg-8 mx-auto">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Localización</h2>
+      <hr class="star-dark mb-5">
+               <!--The div element for the map -->
+            <div id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.433484768754!2d-4.721893684119415!3d41.6463752792412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4712b6e2090e15%3A0x3afa51d357ef8f45!2sOlmos+de+Pablos+Abogados!5e0!3m2!1ses!2ses!4v1550259770176" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+    </div>
+  </section>
+{% endblock %}
