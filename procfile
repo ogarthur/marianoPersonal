@@ -1,1 +1,1 @@
-web: gunicorn abogadoSite.wsgi
+web: gunicorn abogadoSite.ws
