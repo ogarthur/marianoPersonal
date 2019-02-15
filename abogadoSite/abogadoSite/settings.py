@@ -16,8 +16,6 @@ import django_heroku
 BASE_DIR                    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR                = os.path.join(BASE_DIR,'templates')
 STATIC_DIR                  = os.path.join(BASE_DIR,'static')
-STATIC_ROOT                 = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_DIR                   = os.path.join(BASE_DIR,'media')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -123,11 +121,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_DIR, 'static'),
+]
+
+# ManifestStaticFilesStorage is recommended in production, to prevent outdated
+# Javascript / CSS assets being served from cache (e.g. after a Wagtail upgrade).
+# See https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#manifeststaticfilesstorage
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    STATIC_DIR,
-    ]
-MEDIA_ROOT = MEDIA_DIR
-MEDIA_URL  = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 django_heroku.settings(locals())
