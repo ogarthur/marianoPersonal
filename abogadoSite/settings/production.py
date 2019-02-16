@@ -4,7 +4,7 @@ from .base import *
 import dj_database_url
 
 env = os.environ.copy()
-SECRET_KEY = env['SECRET_KEY']
+SECRET_KEY = '2d@rek2b(=n(q-h3)tho+kz19p+z@+-d4sd4pjs-zpu3in*d6v'
 
 DEBUG = False
 DATABASES['default'] =  dj_database_url.config()
