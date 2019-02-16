@@ -245,8 +245,13 @@ header.masthead h2 {
 .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
     font-size: 1.5rem
 }
-
+@media (max-width:576px) {
+  #mainNav .navbar-toggler {
+      display: none!important;
+  }
+}
 @media (min-width:576px) {
+
     .portfolio {
         margin-bottom: -30px
     }
@@ -398,6 +403,7 @@ a:hover {
 .btn-primary:focus,
 .btn-primary:hover {
     background-color: #128f76;
+
     border-color: #128f76
 }
 
@@ -409,6 +415,7 @@ a:hover {
 .btn-secondary:active,
 .btn-secondary:focus,
 .btn-secondary:hover {
+
     background-color: #1a252f;
     border-color: #1a252f
 }
