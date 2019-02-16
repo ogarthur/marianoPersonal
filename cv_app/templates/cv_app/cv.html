@@ -9,11 +9,12 @@
     <h2 class="text-center text-uppercase text-secondary mb-0">¿Quiénes somos?</h2>
     <hr class="star-dark mb-5">
     <div class="row">
+
       <div class="col-lg-4 ml-auto">
-        <p class="lead">Lorem ipsum dolor sit amet consectetur adipiscing elit aptent, senectus pellentesque suspendisse blandit erat laoreet ante ut, fames cras magnis orci suscipit dapibus aenean. Luctus eros varius sociosqu semper netus augue, tempus inceptos vel aptent eleifend nulla proin, donec nam fames arcu per. Cras vivamus torquent magna sem vulputate, morbi porttitor nullam mauris sagittis ligula, dignissim curabitur cursus a.</p>
+        <p class="lead"> {{user_data.info.0}}</p>
       </div>
       <div class="col-lg-4 mr-auto">
-        <p class="lead">Nostra sem aliquet sed ac enim fames eros, arcu hendrerit fringilla rutrum lectus tristique luctus nisl, quam ridiculus est urna condimentum nam. Velit hendrerit eu libero auctor porta vestibulum posuere sociosqu, porttitor habitant laoreet quis felis molestie magna interdum, congue lacus risus penatibus tempor habitasse dui. Vestibulum ullamcorper eleifend sociosqu felis pharetra urna vulputate scelerisque nullam nam orci non netus quam lobortis magnis, fames diam volutpat cum congue ad hac euismod condimentum a sociis aliquet ut senectus.</p>
+        <p class="lead"> {{user_data.info.1}}</p>
       </div>
     </div>
   </div>
@@ -24,11 +25,15 @@
     <div class="container">
       <h2  class="text-center text-uppercase text-white">Contacto</h2>
       <hr class="star-light mb-5">
+
       <div class="row">
         <div class="col-lg-8 mx-auto">
-        <p class='lead'> Si desea ponerse en contacto con nosotros por email, rellene el formulario indicando el motivo de su consulta.</p>
-      </div>
+          <p class='lead'> Si desea ponerse en contacto con nosotros por email, rellene el formulario indicando el motivo de su consulta.</p>
+          {% if user_data.telefono %}
+          <p class='lead'>También puede contactar por telefono en horario comercial: <a class="telefono" href="tel:{{user_data.telefono}}"><i class="fas fa-phone"></i>{{user_data.telefono}}</a></p>
+          {% endif %}
         </div>
+      </div>
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
@@ -57,10 +62,26 @@
             </div>
             <br>
             <div id="success"></div>
+
             <div class="form-group">
+
+               <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+
+
               <button type="submit" class="btn btn-xl btn-outline-light" id="sendMessageButton">Enviar</button>
+
             </div>
           </form>
+
+        </div>
+        <div class="col-lg-8 mx-auto">
+          De acuerdo con lo establecido en la Ley Orgánica 15/1999
+          de Protección de Datos de Carácter Personal, le informamos
+          de que sus datos personales serán tratados con la finalidad
+          de gestionar los servicios prestados a través de la web y darle
+          contestación, en su caso, a su solicitud. Para el ejercicio de
+          sus derechos de acceso, rectificación, cancelación y oposición
+          deberá dirigirse a: <a href = "mailto: {{ user_data.email}}">{{ user_data.email}}</a>
         </div>
       </div>
     </div>

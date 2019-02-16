@@ -19,7 +19,7 @@ h6 {
     font-weight: 700;
     font-family: Montserrat
 }
-
+hr.star-title,
 hr.star-dark,
 hr.star-light {
     max-width: 15rem;
@@ -32,19 +32,25 @@ hr.star-light {
     margin-left: auto;
     margin-right: auto
 }
-
+hr.star-title:after,
 hr.star-dark:after,
 hr.star-light:after {
     position: relative;
     top: -.8em;
     display: inline-block;
     padding: 0 .25em;
-    content: '\f005';
+    content: '\f005';/*estrella*/
+    content:  '\f0e3';/*mazo*/
+    content:  '\f24e';/*balanza*/
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 2em
 }
-
+hr.star-title:after{
+  color: #fff;
+  background-color: var(--dorado);
+  border-radius: 50%;
+}
 hr.star-light {
     border-color: #fff
 }
@@ -145,8 +151,8 @@ section h2 {
 
 @media (min-width:992px) {
     #mainNav {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         -webkit-transition: padding-top .3s, padding-bottom .3s;
         transition: padding-top .3s, padding-bottom .3s
     }
@@ -379,7 +385,7 @@ a:hover {
 }
 
 .text-secondary {
-  
+
     color: var(--azuloscuro) !important
 }
 

@@ -1,0 +1,49 @@
+:root {
+  --azuloscuro:#2C3E50 ;
+  --dorado: #C18F59;
+  --dorado-oscuro:#734d23;
+  --dorado-negro:#402600;
+  --negrosuave: #202020;
+  --granate: #502F36;
+}
+
+.profile_pic{
+  width: 22em;
+  border-radius: 50%
+}
+::placeholder {
+  color: white!important;
+
+}
+.control-group input{
+  background: var(--granate)!important;
+  color: white!important
+}
+.control-group  label{
+
+  color:var(--dorado)!important;
+}
+.form-control:focus{
+  color:white!important;
+  background-color:#603941!important;
+}
+#contact .container{
+  text-align: center;
+
+}
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+
+ }
+#map iframe{
+  width:100%
+}
+@media screen and (min-width: 769px)  {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
