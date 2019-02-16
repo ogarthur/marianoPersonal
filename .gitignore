@@ -1,3 +1,11 @@
+
+*.pyc
+.DS_Store
+*.swp
+/venv/
+/static/
+/media/
+.env
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
