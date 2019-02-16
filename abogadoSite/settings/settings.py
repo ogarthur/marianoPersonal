@@ -128,7 +128,7 @@ USE_TZ = True
 # Javascript / CSS assets being served from cache (e.g. after a Wagtail upgrade).
 # See https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#manifeststaticfilesstorage
 
-django_heroku.base(locals())
+django_heroku.settings(locals())
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
