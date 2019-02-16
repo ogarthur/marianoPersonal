@@ -1,1 +1,1 @@
-web: gunicorn abogadosite.wsgi --log-file -
+web: gunicorn abogadoSite.wsgi --log-file -
