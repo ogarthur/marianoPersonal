@@ -2,7 +2,7 @@
 {% load staticfiles %}
  {% load cookielaw_tags %}
 
-<html>
+<html lang="es">
 <head>
   {% block head %}
     <title>{{ user_data.empresa|default:"Plantilla Abogados" }}</title>
@@ -58,18 +58,13 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <a class="navbar-brand js-scroll-trigger" href="#page-top">{{ user_data.empresa | default:"Plantilla abogadosss" }}</a><br>
+          <h1 class="marcaNav"><a class="navbar-brand js-scroll-trigger" href="#page-top">{{ user_data.empresa | default:"Plantilla abogadosss" }}</a></h1><br>
         </div>
         <div class="col-12">
-
-
             <a class="telefono text-lowercase" href="tel:{{user_data.telefono}}"><i class="fas fa-phone"></i>{{user_data.telefono}}</a>
-
-
               <a class="telefono text-lowercase" href="mailto: {{user_data.email}}">
                 <i class="fa fa-envelope" aria-hidden="true">: {{user_data.email}}</i>
               </a>
-
 
         </div>
         </div>
