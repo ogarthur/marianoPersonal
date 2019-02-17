@@ -3,7 +3,7 @@
 .DS_Store
 *.swp
 /venv/
-/static/
+
 /media/
 .env
 # Byte-compiled / optimized / DLL files
