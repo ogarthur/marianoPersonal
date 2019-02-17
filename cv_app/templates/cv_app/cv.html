@@ -75,13 +75,13 @@
 
         </div>
         <div class="col-lg-8 mx-auto">
-          De acuerdo con lo establecido en la Ley Orgánica 15/1999
+          <p>De acuerdo con lo establecido en la Ley Orgánica 15/1999
           de Protección de Datos de Carácter Personal, le informamos
           de que sus datos personales serán tratados con la finalidad
           de gestionar los servicios prestados a través de la web y darle
           contestación, en su caso, a su solicitud. Para el ejercicio de
           sus derechos de acceso, rectificación, cancelación y oposición
-          deberá dirigirse a: <a href = "mailto: {{ user_data.email}}">{{ user_data.email}}</a>
+          deberá dirigirse a: <a href = "mailto: {{ user_data.email}}">{{ user_data.email}}</a></p>
         </div>
       </div>
     </div>
@@ -90,7 +90,11 @@
   <section id="location">
     <div class="col-lg-8 mx-auto">
       <h2 class="text-center text-uppercase text-secondary mb-0">Localización</h2>
+
       <hr class="star-dark mb-5">
+      <div class="col-lg-8 mx-auto text-center" style="font-size:2rem">
+      <p >{{user_data.direccion.0|default:"CALLE FALSA 33"}}, {{user_data.direccion.1|default:"PUCELA"}}</p>
+        </div>
                <!--The div element for the map -->
             <div id="map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.433484768754!2d-4.721893684119415!3d41.6463752792412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4712b6e2090e15%3A0x3afa51d357ef8f45!2sOlmos+de+Pablos+Abogados!5e0!3m2!1ses!2ses!4v1550259770176" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>

@@ -6,7 +6,10 @@
   --negrosuave: #202020;
   --granate: #502F36;
 }
-
+#headerWall{
+  background-size:cover;
+  background-image: url(/static/images/fondos/fondo.webp);
+}
 .profile_pic{
   width: 22em;
   border-radius: 50%
@@ -19,12 +22,7 @@
   color:white!important;
       font-size: 0.9em;
 }
-.animate-opacity{animation:opac 0.3s}@keyframes opac{from{opacity:0} to{opacity:1}}
-#headerWall{
-  background-image: url(/static/images/fondos/fondo11.jpg);
-  background-size:cover;
 
-}
 
 .control-group input{
   background: var(--granate)!important;

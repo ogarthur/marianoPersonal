@@ -10,6 +10,8 @@
       <link rel="shortcut icon" href="{% static 'favicon/favicon2.ico' %}" type="image/gif" sizes="16x16">
       <link rel="icon" href="{% static 'favicon/favicon2.ico' %}" type="image/x-icon" />
       <link rel="shortcut icon" href="{% static 'favicon/favicon2.ico' %}"  type="image/x-icon" />
+
+
     {% endblock favicon %}
     {% block head_viewport %}
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,32 +27,40 @@
     {% endblock head_contentlanguage %}
     {% block header_javascript_site %}
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     {% endblock header_javascript_site %}
     {% block head_css %}
       {% block head_css_site %}
+        <style media="screen">
+          body {
+              opacity: 1;
+              transition: 0.3s opacity;
+          }
+          body.fade-out {
+              opacity: 0;
+              transition: none;
+          }
+          html {
+              background-color: #c18f5994
+          }
+        </style>
         <!-- Bootstrap core CSS -->
-        <style>
-        #headerWall{
-          background-image: url(/static/images/fondos/fondo11.jpg);
-          background-size:cover;
-
-        }</style>
         <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
         <!-- Custom fonts for this template -->
         <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}"  rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/fonts.css' %}"  rel="stylesheet" type="text/css">
+
 
         <!-- Plugin CSS -->
         <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css">
         <!-- Cookie css -->
         <link href="{% static 'cookielaw/css/cookielaw.css' %}" rel="stylesheet" type="text/css">
 
-
         <!-- Custom styles for this template -->
         <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
         <link href="{% static 'css/basic.css' %}" rel="stylesheet">
+
 
       {% endblock head_css_site %}
       {% block head_css_section %}{% endblock head_css_section %}
@@ -60,9 +70,10 @@
 </head>
 
 <body id="page-top">
+  <script>document.body.className += ' fade-out';</script>
   {# Navigation #}
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-    <div class="container">
+    <div class="container" id="headerContainer">
       <div class="row">
         <div class="col-12">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">{{ user_data.empresa | default:"Plantilla abogadosss" }}</a><br>
@@ -100,9 +111,10 @@
   </nav>
 
   <!-- Header -->
-  <header id="headerWall" class="masthead bg-primary text-white text-center animate-opacity">
-    <div class="container">
-      <img class="img-fluid mb-5 d-block mx-auto profile_pic" src="{% static 'images/profile/hombre60.jpg' %}" alt="">
+
+  <header id="headerWall" style="background-image: url(/static/images/fondos/fondo.webp);" class="masthead bg-primary text-white text-center ">
+    <div class="container" >
+      <img class="img-fluid mb-5 d-block mx-auto profile_pic" src="{% static 'images/profile/hombre60.webp' %}" alt="">
       <h1 class="text-uppercase mb-0">{{ user_data.nombre|default:"Abogados"}} {{ user_data.apellidos }}</h1>
       <hr class="star-title">
       <h2 class="font-weight-light mb-0 text-uppercase ">
@@ -208,10 +220,19 @@
 
       <!-- Custom scripts for this template -->
       <script src="{% static 'js/freelancer.min.js' %}"></script>
-
+      <script>
+          $(function() {
+            $('body').removeClass('fade-out');
+          });
+      </script>
       {% endblock footer_javascript_site %}
     {% block footer_javascript_section %}{% endblock footer_javascript_section %}
     {% block footer_javascript_page %}
+      <script>
+        $(function() {
+          $('body').removeClass('fade-out');
+        });
+    </script>
 
     <script src="{% static 'cookielaw/js/cookielaw.js' %}"></script>
 
@@ -228,24 +249,6 @@
     $(document).ready(function () {
        $('.close-cookies').click(function () {
            $(this).parent().hide();
-       });
-    });
-    </script>
-    <script type="application/javascript">
-    $(document).ready(function () {
-      var contFondos= 12;
-       $('#headerWall').click(function () {
-           contFondos+=1
-
-           if (contFondos<13){
-              fondo="url(/static/images/fondos/fondo"+contFondos+".jpg)"
-           }else{
-              contFondos=1
-              fondo="url(/static/images/fondos/fondo1.jpg)"
-            }
-            $('#headerWall').css('background-image',fondo);
-
-          console.log(fondo)
        });
     });
     </script>
