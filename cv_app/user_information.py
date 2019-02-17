@@ -23,8 +23,7 @@ test_user_data= {
     'telefono':'+34 000 000 000',
     'direccion':['Calle falsa numero 3',' Valladolid'],
     'redes':{'twitter':'https://twitter.com/'   ,'linkedin':'https://linkedin.com/'},
-
-}
+},
 user_data = {
     'empresa':'Olmos de Pablos Abogados|Abogado en valladolid',
     'nombre':'Mariano',
