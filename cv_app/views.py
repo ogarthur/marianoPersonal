@@ -4,5 +4,5 @@ from cv_app import user_information
 def index(request):
     print(user_information.test_user_data)
     data = user_information.test_user_data
+
     return render(request,'cv_app/cv.html',{'user_data':data})
-    #return render(request,'index.html')

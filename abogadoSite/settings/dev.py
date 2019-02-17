@@ -1,5 +1,7 @@
-from .base import *
-
+from __future__ import absolute_import, unicode_literals
+import os
+from .settings import *
+import dj_database_url
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '2d@rek2b(=n(q-h3)tho+kz19p+z@+-d4sd4pjs-zpu3in*d6v'
 

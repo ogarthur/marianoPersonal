@@ -59,7 +59,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="marcaNav"><a class="navbar-brand js-scroll-trigger" href="#page-top">{{ user_data.empresa | default:"Plantilla abogadosss" }}</a></h1><br>
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">{{ user_data.empresa | default:"Plantilla abogadosss" }}</a><br>
         </div>
         <div class="col-12">
             <a class="telefono text-lowercase" href="tel:{{user_data.telefono}}"><i class="fas fa-phone"></i>{{user_data.telefono}}</a>
@@ -230,7 +230,7 @@
       var contFondos= 1;
        $('#headerWall').click(function () {
            contFondos+=1
-           console.log("CAMBIANDO FONDO")
+
            if (contFondos<13){
               fondo="url(/static/images/fondos/fondo"+contFondos+".jpg)"
            }else{

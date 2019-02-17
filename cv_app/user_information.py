@@ -2,7 +2,7 @@
 Diccionario con toda la informacion personal del usuario
 """
 test_user_data= {
-    'empresa':'Plantilla abogados|Abogado en valladolid',
+    'empresa':'Plantilla abogados',
     'nombre':'Juan',
     'apellidos':'Lore lipsum',
     'profesion':['abogado','mediador'],
@@ -23,9 +23,9 @@ test_user_data= {
     'telefono':'+34 000 000 000',
     'direccion':['Calle falsa numero 3',' Valladolid'],
     'redes':{'twitter':'https://twitter.com/'   ,'linkedin':'https://linkedin.com/'},
-},
+}
 user_data = {
-    'empresa':'Olmos de Pablos Abogados|Abogado en valladolid',
+    'empresa':'Olmos de Pablos Abogados',
     'nombre':'Mariano',
     'apellidos':'Olmos de Pablos',
     'profesion':['abogado','mediador'],
