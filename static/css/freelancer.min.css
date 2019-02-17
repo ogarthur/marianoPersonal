@@ -363,7 +363,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 a {
-    color: var(--granate)
+    color:white;
 }
 
 a:active,

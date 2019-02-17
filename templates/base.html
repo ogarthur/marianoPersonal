@@ -29,6 +29,12 @@
     {% block head_css %}
       {% block head_css_site %}
         <!-- Bootstrap core CSS -->
+        <style>
+        #headerWall{
+          background-image: url(/static/images/fondos/fondo11.jpg);
+          background-size:cover;
+
+        }</style>
         <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
         <!-- Custom fonts for this template -->
@@ -227,7 +233,7 @@
     </script>
     <script type="application/javascript">
     $(document).ready(function () {
-      var contFondos= 1;
+      var contFondos= 12;
        $('#headerWall').click(function () {
            contFondos+=1
 

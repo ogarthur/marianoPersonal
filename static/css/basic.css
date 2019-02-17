@@ -21,7 +21,7 @@
 }
 .animate-opacity{animation:opac 0.3s}@keyframes opac{from{opacity:0} to{opacity:1}}
 #headerWall{
-  background-image: url(/static/images/fondos/fondo1.jpg);
+  background-image: url(/static/images/fondos/fondo11.jpg);
   background-size:cover;
 
 }
