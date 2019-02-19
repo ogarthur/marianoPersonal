@@ -4,8 +4,8 @@ Diccionario con toda la informacion personal del usuario
 test_user_data = {
     'empresa': 'Plantilla autónomo',
     'nombre': 'Nombre',
-    'apellidos': 'Apellido1 Apellido2',
-    'profesion': ['profesion','profesion2','profesion3'],
+    'apellidos': 'Lopez Gomez',
+    'profesion': ['Profesion','Profesion2','Profesion3','Profesion4',],
     'bio': 'Breve biografia sobre el usuario',
     'info': ['Lorem ipsum dolor sit amet consectetur adipiscing elit aptent,\
             senectus pellentesque suspendisse blandit erat laoreet ante ut, fames cras magnis\
