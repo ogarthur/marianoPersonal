@@ -37,6 +37,7 @@
                     {% endif %}
                 </div>
             </div>
+        {%  if user_data.email %}
             <div class="row">
                 <div class="col-lg-8 mx-auto">
 
@@ -80,6 +81,8 @@
                         </div>
                     </form>
 
+
+
                 </div>
                 <div class="col-lg-8 mx-auto">
                     <p>De acuerdo con lo establecido en la Ley Orgánica 15/1999
@@ -90,6 +93,13 @@
                         sus derechos de acceso, rectificación, cancelación y oposición
                         deberá dirigirse a: <a href="mailto: {{ user_data.email }}">{{ user_data.email }}</a></p>
                 </div>
+                         {%  else %}
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p> El formulario de consulta no esta disponible aún, perdón por las molestias.</p>
+                </div>
+            </div>
+            {% endif %}
             </div>
         </div>
     </section>
